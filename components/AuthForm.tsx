@@ -22,6 +22,7 @@ import { authFormSchema } from '@/lib/utils';
 import { Sign } from 'crypto';
 import SignUp from '@/app/(auth)/sign-up/page';
 import { useRouter } from 'next/navigation';
+import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions';
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -32,6 +33,7 @@ const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
 
   const formSchema = authFormSchema(type);
 
@@ -51,17 +53,17 @@ const AuthForm = ({ type }: { type: string }) => {
     try {
       // Sign up with AppWrite & plain link token
       if(type === 'sign-up') {
-        //const newUser = await signUp(data);
-       //setUser(newUser);
+        const newUser = await signUp(data);
+        setUser(newUser);
         }
 
       if(type === 'sign-in') {
-        //const response = await SignIn( {
-        //  email: data.email,
-        //  password: data.password
-        //})
+        const response = await signIn( {
+          email: data.email,
+          password: data.password
+        })
 
-        //if(response) router.push('/')
+        if(response) router.push('/')
       }
     } catch (error) {
       console.log(error);
