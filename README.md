@@ -1,3 +1,8 @@
+## Demo Sign-In
+
+- Email: demo@example.com
+- Password: 12345678
+
 ## Overview
 
 A SaaS platform designed to simplify personal finance management, providing an all-in-one solution for tracking income, expenses, budgets, and secure money transfers.
@@ -37,11 +42,6 @@ Run:
 npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
-
-## Demo Sign-In
-
-- Email: demo@example.com
-- Password: 12345678
 
 
 ## Deployment
