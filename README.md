@@ -1,8 +1,3 @@
-## Demo Sign-In
-
-- Email: demo@example.com
-- Password: 12345678
-
 ## Overview
 
 A SaaS platform designed to simplify personal finance management, providing an all-in-one solution for tracking income, expenses, budgets, and secure money transfers.
